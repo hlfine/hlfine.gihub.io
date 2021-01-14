@@ -3,7 +3,7 @@
  * @Autor: hanl
  * @Date: 2021-01-14 09:45:22
  * @LastEditors: hanl
- * @LastEditTime: 2021-01-14 13:42:36
+ * @LastEditTime: 2021-01-14 13:48:02
  */
 const path = require("path");
 // vite.config.js # or vite.config.ts
@@ -21,6 +21,8 @@ module.exports = {
   https: false,
   // 服务端渲染
   ssr: false,
+  // 输出的静态资源的文件夹名称
+  assetsDir:'assets',
   /**
    * 在生产中服务时的基本公共路径。
    * @default '/'
