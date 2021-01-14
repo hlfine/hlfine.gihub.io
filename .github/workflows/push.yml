@@ -55,6 +55,9 @@ jobs:
       - name: Install and Build
         run: |
           cd vue-vite && yarn
+          cd ..
+          rimraf docs
+          cd vue-vite
           yarn run build
       - name: Update to repository
         env:
