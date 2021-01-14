@@ -48,10 +48,10 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12'
+      # - uses: actions/checkout@v2
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '12'
 
       # 安装和构建
       - name: Install and Build
@@ -67,11 +67,11 @@ jobs:
           # 作为博客的仓库名
           BLOG_REPO: "hlfine.github.io"
           # GitHub Token
-          GITHUB_TOKEN: ${{ secrets.G_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
 
         run: |
           git config --global user.email $GITHUB_USERNAME
           git config --global user.name $EMAIL
           cd .. && git init && git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$BLOG_REPO.git" main:main
+          git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$BLOG_REPO.git" main
