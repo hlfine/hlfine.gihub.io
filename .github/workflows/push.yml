@@ -30,9 +30,7 @@
 #           # Vue CLI默认打包到 dist 目录
 #           FOLDER: docs # The folder the action should deploy.
 #           # 在向 BRANCH 分支推送代码前，可以指定构建脚本
-          BUILD_SCRIPT: cd vue-vite && npm install && npm run build # The build script the action should run prior to deploying.
-
-name: buildAndDeploy
+          # BUILD_SCRIPT: cd vue-vite && npm install && npm run build # The build script the action should run prior to deploying.
 
 env:
   TZ: Asia/Shanghai
@@ -45,13 +43,13 @@ on:
 
 # 开始任务
 jobs:
-  main:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # - uses: actions/checkout@v2
-      # - uses: actions/setup-node@v1
-      #   with:
-      #     node-version: '12'
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
 
       # 安装和构建
       - name: Install and Build
