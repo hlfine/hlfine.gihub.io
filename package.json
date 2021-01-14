@@ -2,5 +2,6 @@
   "scripts": {
     "dev": "cd vue-vite && yarn dev",
     "build": "cd vue-vite && yarn build"
-  }
+  },
+  "homepage": "https://hlfine.github.io/hlfine.github.io/"
 }

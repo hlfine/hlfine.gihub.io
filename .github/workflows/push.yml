@@ -16,9 +16,18 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - run: npm ci # 相当于npm install
-    - run: npm run docs:build
-
-    #发布到hlfine.github.io/main
-    - name: Deploy hlfine.github.io/main
+      # 步骤名称      
+      - name: Build and Deploy
+        # 该步骤所需的环境变量
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          # 在部署前要checkout的基本分支，默认是master
+          BASE_BRANCH: main # The branch the action should deploy from.
+          # 指定部署的分支，默认是 gh-pages 分支
+          BRANCH: main # The branch the action should deploy to.
+          # 存储库中要部署的文件夹。
+          # 该步骤会将项目中 FOLDER 指定文件夹下的文件推送到 BRANCH 分支，作为Github Pages 部署的内容。
+          # Vue CLI默认打包到 dist 目录
+          FOLDER: docs # The folder the action should deploy.
+          # 在向 BRANCH 分支推送代码前，可以指定构建脚本
+          BUILD_SCRIPT: cd vue-vite && npm install && npm run build # The build script the action should run prior to deploying.
