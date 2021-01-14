@@ -3,7 +3,7 @@
  * @Autor: hanl
  * @Date: 2021-01-14 09:45:22
  * @LastEditors: hanl
- * @LastEditTime: 2021-01-14 09:51:37
+ * @LastEditTime: 2021-01-14 13:42:36
  */
 const path = require("path");
 // vite.config.js # or vite.config.ts
@@ -25,7 +25,7 @@ module.exports = {
    * 在生产中服务时的基本公共路径。
    * @default '/'
    */
-  base: "./",
+  base: "/",
   /**
    * 与“根”相关的目录，构建输出将放在其中。如果目录存在，它将在构建之前被删除。
    * @default 'docs'
