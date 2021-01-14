@@ -39,10 +39,9 @@ env:
 
 
 on:
-  # 当master分支提交时
+  # main
   push:
-    branches:
-      - main
+    branches: [main]
 
 # 开始任务
 jobs:
