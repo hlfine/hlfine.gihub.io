@@ -20,6 +20,5 @@ jobs:
     - run: npm ci # 相当于npm install
     - run: npm run docs:build
 
-    #发布到mybells.github.io/master
-    - name: Deploy mybells.github.io/master
-      uses: peaceiris/actions-gh-pages@v2
+    #发布到hlfine.github.io/main
+    - name: Deploy hlfine.github.io/main
