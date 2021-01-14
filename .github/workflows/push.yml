@@ -74,7 +74,6 @@ jobs:
           ls
           git config --global user.email $GITHUB_USERNAME
           git config --global user.name $EMAIL
-          git init && git add .
-          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
           git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$BLOG_REPO.git" main
