@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "dev": "cd vue-vite && yarn dev",
+    "build": "cd vue-vite && yarn build"
+  }
+}
