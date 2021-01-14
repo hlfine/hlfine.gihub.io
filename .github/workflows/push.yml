@@ -71,7 +71,6 @@ jobs:
           BUILD_SCRIPT: npm install && npm run build
 
         run: |
-          ls
           git config --global user.email $GITHUB_USERNAME
           git config --global user.name $EMAIL
           git add .
