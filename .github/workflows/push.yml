@@ -22,3 +22,4 @@ jobs:
 
     #发布到hlfine.github.io/main
     - name: Deploy hlfine.github.io/main
+    - uses: actions/checkout@v2
