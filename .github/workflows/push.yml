@@ -55,7 +55,7 @@ jobs:
       - name: Install and Build
         run: |
           cd vue-vite && yarn
-          cd vue-vite && yarn run build
+          yarn run build
       - name: Update to repository
         env:
           # 你的GitHub名字
