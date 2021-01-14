@@ -71,7 +71,8 @@ jobs:
           git config --global user.email $GITHUB_USERNAME
           git config --global user.name $EMAIL
           cd .. 
-          git pull --rebase origin main
+          git init
+          git pull --rebase "https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$BLOG_REPO.git" main
           git init && git add .
           git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$BLOG_REPO.git" main:main
+          git push --force --quiet "https://$GITHUB_TOKEN@github.com/$GITHUB_USERNAME/$BLOG_REPO.git" main
