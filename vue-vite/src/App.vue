@@ -8,7 +8,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import NewCOmponent from './components/NewCOmponent'
+import NewCOmponent from './components/NewCOmponent.vue'
 
 export default {
   name: 'App',
