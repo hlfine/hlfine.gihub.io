@@ -3,7 +3,7 @@
  * @Autor: hanl
  * @Date: 2021-01-14 14:13:36
  * @LastEditors: hanl
- * @LastEditTime: 2021-01-14 14:16:04
+ * @LastEditTime: 2021-01-14 14:18:47
 -->
 
 <template>
@@ -24,6 +24,3 @@ export default {
   },
 }
 </script>
-
-<style lang='scss' scoped>
-</style>
